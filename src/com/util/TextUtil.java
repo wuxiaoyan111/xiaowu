@@ -22,12 +22,22 @@ public class TextUtil {
         System.out.println("*******请输入你想取款的项目：*******************");
         System.out.println("********1.100         2.200*****************");
         System.out.println("*******3.300         4.500***********");
-        System.out.println("*******6.500         7.1000***********");
+        System.out.println("*******5.800         6.1000***********");
         System.out.println("*****7.2000        8其他 *******");
         System.out.println("************************************************");
 
 
 
+    }
+    //存款
+    public static  void doSaveMoney(){
+        System.out.println("***************************");
+        System.out.println("*******请输入你存款的数目******");
+        System.out.println("*******1.100   2.200*******");
+        System.out.println("*******3.300   4.400*******");
+        System.out.println("*******5.800   6.1000*******");
+        System.out.println("*******7.2000  8.其他********");
+        System.out.println("****************************");
     }
 
 //客户的1级选择

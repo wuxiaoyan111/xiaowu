@@ -87,7 +87,7 @@ if (s.equalsIgnoreCase("y")){
     //存款
     private  void doSaveMoney() {
       // 1.提示页面
-        System.out.println("请输入你的余额");
+       /* System.out.println("请输入你的余额");
 
         //2. scanner 接收 钱数
         Scanner scanner = new Scanner(System.in);
@@ -96,7 +96,62 @@ if (s.equalsIgnoreCase("y")){
        double newMoney = currenCustomer.getMoney()+moneyInInt;
         //更新当前用户余额
         currenCustomer.setMoney(newMoney);
-        System.out.println("你的账户余额是："+newMoney);
+        System.out.println("你的账户余额是："+newMoney);*/
+        TextUtil.getmoneyUI();
+        //让客户输入
+        Scanner scanner = new Scanner(System.in);
+        String numIn = scanner.nextLine();
+        if (numIn.equals("1")){
+            double money = currenCustomer.getMoney();
+            money= money+100;
+            System.out.println("你的余额是："+money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("2")){
+            double money = currenCustomer.getMoney();
+            money= money+200;
+            System.out.println("你的余额是："+money);
+            currenCustomer.setMoney(money);
+
+
+
+        }else  if (numIn.equals("3")) {
+            double money = currenCustomer.getMoney();
+            money = money + 300;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("4")) {
+            double money = currenCustomer.getMoney();
+            money = money + 400;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("5")) {
+            double money = currenCustomer.getMoney();
+            money = money + 800;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("6")) {
+            double money = currenCustomer.getMoney();
+            money = money + 1000;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("7")) {
+            double money = currenCustomer.getMoney();
+            money = money + 2000;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else if(numIn.equals("8")){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("请输入您的存款金额：");
+            int money = sc.nextInt();
+            if (money>0&&money<=currenCustomer.getMoney()){
+                currenCustomer.setMoney(currenCustomer.getMoney()+money);
+                System.out.println("存款成功");
+                System.out.println("你的当前余额为："+currenCustomer.getMoney());
+            }else {
+                System.out.println("输入错误");
+            }
+        }
+
     }
     //取钱
     private void goGetMoneyHome() {
@@ -111,6 +166,56 @@ if (s.equalsIgnoreCase("y")){
             System.out.println("你的余额是：" + money);
             //取完款 更新原有的存款
             currenCustomer.setMoney(money);
+        } else if (numIn.equals("2")) {
+            //按下2  取款200
+            double money = currenCustomer.getMoney();
+            money = money - 200;
+            System.out.println("你的余额是：" + money);
+            //取完款后 更新原有存款
+            currenCustomer.setMoney(money);
+
+        } else if (numIn.equals("3")) {
+            double money = currenCustomer.getMoney();
+            money = money - 300;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else if(numIn.equals("4")) {
+            double money = currenCustomer.getMoney();
+            money = money - 500;
+            System.out.println("你的余额是：" + money);
+            currenCustomer.setMoney(money);
+        }else  if (numIn.equals("5")){
+            double money = currenCustomer.getMoney();
+            money= money-800;
+            System.out.println("你的余额是："+money);
+            currenCustomer.setMoney(money);
+
+
+        }else  if (numIn.equals("6")){
+            double money = currenCustomer.getMoney();
+            money= money-1000;
+            System.out.println("你的余额是："+money);
+            currenCustomer.setMoney(money);
+
+
+        }else if(numIn.equals("7")){
+            double money = currenCustomer.getMoney();
+            money= money-2000;
+            System.out.println("你的余额是："+money);
+            currenCustomer.setMoney(money);
+
+
+        }else if(numIn.equals("8")){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("请输入您的取款金额：");
+            int money = sc.nextInt();
+            if (money>0&&money<=currenCustomer.getMoney()){
+                currenCustomer.setMoney(currenCustomer.getMoney()-money);
+                System.out.println("取款成功");
+                System.out.println("你的当前余额为："+currenCustomer.getMoney());
+            }else {
+                System.out.println("输入错误");
+            }
         }
     }
 //转账
