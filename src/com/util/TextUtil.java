@@ -16,6 +16,20 @@ public class TextUtil {
 
 
     }
+    //方法带有static关键字是静态方法，可以直接 类名.方法名（）调用
+    public  static void  getmoneyUI(){
+        System.out.println("************************************************");
+        System.out.println("*******请输入你想取款的项目：*******************");
+        System.out.println("********1.100         2.200*****************");
+        System.out.println("*******3.300         4.500***********");
+        System.out.println("*******6.500         7.1000***********");
+        System.out.println("*****7.2000        8其他 *******");
+        System.out.println("************************************************");
+
+
+
+    }
+
 //客户的1级选择
     public  static void  oneLeveOption(){
         System.out.println("************************************************");

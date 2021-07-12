@@ -58,6 +58,4 @@ public class AtmMain {
         cardPwd = scanner.nextLine();
         System.out.println("cardPwd = " + cardPwd);
     }
-
-
 }
